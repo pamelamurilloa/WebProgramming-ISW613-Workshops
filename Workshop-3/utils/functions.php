@@ -71,3 +71,33 @@ function getUsers() {
 
   return $users;
 }
+
+function authenticate($username, $password){
+  $conn = getConexion();
+  $sql = "SELECT * FROM users WHERE `username` = '$username' AND `password` = '$password'";
+  $result = $conn->query($sql);
+
+  if ($conn->connect_errno) {
+    $conn->close();
+    return false;
+  }
+  $results = $result->fetch_array();
+  $conn->close();
+  return $results;
+}
+
+/**
+ * Deletes an student from the database
+ */
+function deleteUser($id){
+  $conn = getConexion();
+  $sql = "DELETE FROM users WHERE id = $id";
+  $result = $conn->query($sql);
+
+  if ($conn->connect_errno) {
+    $conn->close();
+    return false;
+  }
+  $conn->close();
+  return true;
+}

@@ -1,56 +1,53 @@
 <?php
-  include('utils/functions.php');
-  $provinces = getProvinces();
+  $message = "";
+  // session_start();
+  // if ($_SESSION && $_SESSION['user']){
+  //   //user already logged in
+  //   header('Location: dashboard.php');
+  // }
 
+  // if(!empty($_REQUEST['status'])) {
+  //   switch($_REQUEST['status']) {
+  //     case 'login':
+  //       $message = 'User does not exists';
+  //     break;
+  //     case 'error':
+  //       $message = 'There was a problem inserting the user';
+  //     break;
+  //   }
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign up</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <title>Document</title>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="jumbotron">
-      <h1 class="display-4">Signup</h1>
-      <p class="lead">This is the signup process</p>
-      <hr class="my-4">
+<div class="container">
+    <div class="msg">
+      <?php echo $message; ?>
     </div>
-    <form method="post" action="signup.php">
+    <h1>User Login</h1>
+    <form action="login.php" method="POST" class="form-inline" role="form">
       <div class="form-group">
-        <label for="first-name">First Name</label>
-        <input id="first-name" class="form-control" type="text" name="firstName">
+        <label class="sr-only" for="">Username</label>
+        <input type="text" class="form-control" id="" name="username" placeholder="Your username">
       </div>
       <div class="form-group">
-        <label for="last-name">Last Name</label>
-        <input id="last-name" class="form-control" type="text" name="lastName">
+        <label class="sr-only" for="">Password</label>
+        <input type="password" class="form-control" id="" name="password" placeholder="Your password">
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input id="email" class="form-control" type="text" name="email">
-      </div>
-      <div class="form-group">
-        <label for="province">Provincia</label>
-        <select id="province" class="form-control" name="province">
-          <?php
-          foreach($provinces as $id => $province) {
-            echo "<option value=\"$id\">$province</option>";
-          }
-          ?>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input id="password" class="form-control" type="password" name="password">
-      </div>
-      <button type="submit" class="btn btn-primary"> Sign up </button>
-    </form>
-  </div>
 
+      <!-- <button type="submit" class="btn btn-primary">Login</button> -->
+      <input type="submit" class="btn btn-primary" value="Login"></input>
+
+      <a class="btn">Clear</a>
 </body>
-
 </html>
