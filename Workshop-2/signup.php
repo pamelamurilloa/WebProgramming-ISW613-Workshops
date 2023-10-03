@@ -23,24 +23,18 @@ include('utils/functions.php'); // Incluye el archivo de conexión a la base de 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recibe los datos del formulario
-    $firstName = $_POST["firstName"];
-    $lastName = $_POST["lastName"];
-    $email = $_POST["email"];
-    $provinceID = $_POST["province"];
-    $password = $_POST["password"];
+    $user['firstName'] = $_POST["firstName"];
+    $user['lastName'] = $_POST['lastName'];
+    $user['email'] = $_POST['email'];
+    $user['provinceID'] = $_POST['province'];
+    $user['password'] = $_POST['password'];
 
+  if (saveUser($user)) {
+    header("Location: http://localhost/WebProgramming-Workshops/Workshop-2/users.php");
+  } else {
+  header("Location: http://localhost/WebProgramming-Workshops/Workshop-2/?error=true");
+  }
 
-    $sql = "INSERT INTO users (firstname, lastname, password, email, province_id) VALUES('$firstName', '$lastName', 'password', '$email', '$provinceID')";
-
-    $conexion = getConnection();
-    
-    if ($conexion->query($sql) === TRUE) {
-      echo "Registro exitoso";
-    } else {
-      echo "Error al registrar: " . $conexion->error;
-    }
-
-    $conexion->close();
 
 }
 ?>
