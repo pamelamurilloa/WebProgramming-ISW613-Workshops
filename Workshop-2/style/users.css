@@ -39,3 +39,13 @@ thead tr {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.button-like {
+    padding: 10px;
+    background-color: antiquewhite;
+    border: solid #26008b;
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+}

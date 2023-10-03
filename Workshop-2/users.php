@@ -2,6 +2,7 @@
 include('utils/functions.php');
 
 //Fetches the user list from fuctions
+
 $users = getUsers();
 ?>
 
@@ -42,6 +43,7 @@ $users = getUsers();
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <a class="btn btn-secondary" href="index.php">Return to Main</a>
     </div>
 </body>
 </html>
