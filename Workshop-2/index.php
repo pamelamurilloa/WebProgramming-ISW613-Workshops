@@ -48,7 +48,6 @@
         <input id="password" class="form-control" type="password" name="password">
       </div>
       <button type="submit" class="btn btn-primary"> Sign up </button>
-      <!-- <input type="submit" class="btn btn-primary" value="Sign up"></input> -->
     </form>
   </div>
 
