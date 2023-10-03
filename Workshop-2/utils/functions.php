@@ -1,14 +1,24 @@
 <?php
 
 
-
-
 /**
  *  Gets the provinces from the database
  */
 function getProvinces() {
   //select * from provinces
-  return [1 => 'Alajuela', 2 => 'San Jose', 3 => 'Cartago', 80 => 'Heredia', 90 => 'Limon', 100 => 'Puntarenas', 200 => 'Guanacaste'];
+  $conexion = getConnection();
+
+  $sql = "SELECT id, name FROM provinces";
+  $result = $conexion->query($sql);
+
+  $provinces = [];
+
+  // Fetch rows and format the data into the desired array structure
+  while ($row = $result->fetch_assoc()) {
+      $provinces[$row['id']] = $row['name'];
+  }
+
+  return $provinces;
 
 }
 
@@ -28,9 +38,11 @@ function saveUser($user){
 
   $firstName = $user['firstName'];
   $lastName = $user['lastName'];
-  $username = $user['email'];
-
-  $sql = "INSERT INTO users (firstname, lastname, password, email, province_id) VALUES('$firstName', '$lastName', 'password', '$email', '$provinceID')";
+  $password = $user['password'];
+  $email = $user['email'];
+  $provinceID = $user['provinceID'];
+  
+  $sql = "INSERT INTO users (firstname, lastname, password, email, province_id) VALUES('$firstName', '$lastName', '$password', '$email', '$provinceID')";
 
   $conexion = getConnection();
 
