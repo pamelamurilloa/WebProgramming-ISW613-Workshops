@@ -1,24 +1,47 @@
-<!-- crear una tabla donde se muestren los usuarios -->
+<?php
+include('utils/functions.php');
 
-<table>
-  <tr>
-    <th>FirstName</th>
-    <th>Lastname</th>
-    <th>Password</th>
-    <th>E-mail</th>
-    <th>ProvinceID</th>
-    <th>Province</th>
-  </tr>
-  <?php
-    foreach($users as $id => $user) {
-        $firstName = $user['firstName'];
-        $lastName = $user['lastName'];
-        $email = $user['email'];
-        $province_id = $user['province_id'];
-        $province = $user['province'];
-
-        echo "<tr> <td>$firstname</td> <td>$lastname</td> <td>$password</td> <td>$email</td> <td>$province_id</td> <td>$province</td> >/tr>";
-    }
+//Fetches the user list from fuctions
+$users = getUsers();
 ?>
-</table>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UserInformation</title>
+</head>
+<body>
+    <div class="user-info-container">
+        <div class="user-info-container__top-info">
+            <h1 class="title">User Information</h1>
+            <p class="subtitle">List of users</p>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Province</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($users as $user) : ?>
+                    <tr>
+                        <td><?php echo $user['id']; ?></td>
+                        <td><?php echo $user['firstname']; ?></td>
+                        <td><?php echo $user['lastname']; ?></td>
+                        <td><?php echo $user['email']; ?></td>
+                        <td><?php echo $user['province']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
 
