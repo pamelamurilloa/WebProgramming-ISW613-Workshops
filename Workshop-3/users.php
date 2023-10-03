@@ -29,6 +29,8 @@ $users = getUsers();
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Province</th>
+                    <td>Edit</td>
+                    <td>Delete</td>
                 </tr>
             </thead>
             <tbody>
@@ -39,6 +41,10 @@ $users = getUsers();
                         <td><?php echo $user['lastname']; ?></td>
                         <td><?php echo $user['email']; ?></td>
                         <td><?php echo $user['province']; ?></td>
+                        <?php
+                        echo '<td><a href="/WebProgramming-Workshops/Workshop-3/users/edit.php?id=' . $user['id'] . '">Edit</a> </td>';
+                        echo '<td><a href="/WebProgramming-Workshops/Workshop-3/users/delete.php?id=' . $user['id'] . '">Delete</a> </td>';
+                        ?>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
