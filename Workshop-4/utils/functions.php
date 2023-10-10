@@ -154,3 +154,18 @@ function deleteUser($id){
   $conexion->close();
   return true;
 }
+
+// Determines if one o more users have been active within a certain timeframe
+
+function setInactiveUsers ($hoursSinceLastLogin){
+  $conexion = getConexion();
+  $sql = "UPDATE users SET active_status = 0 WHERE id IN (SELECT id FROM users WHERE TIMESTAMPDIFF(HOUR, last_login_datetime, CURRENT_TIMESTAMP) > $hoursSinceLastLogin AND active_status = 1);";
+  $result = $conexion->query($sql);
+
+  // Check if the query was successful
+  if ($result === false) {
+    die("Error in SQL query: " . $conexion->error);
+  }
+
+  return $result;
+}
