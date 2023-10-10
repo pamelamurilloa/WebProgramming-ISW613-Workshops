@@ -66,7 +66,10 @@
         <select id="province" class="form-control" name="province">
           <?php
           foreach($provinces as $id => $province) {
-            echo "<option value=\"$id\">$province</option>";
+
+            $selected = ($id === $user['province_id']) ? 'selected=true' : '';
+            echo $selected;
+            echo "<option value=\"$id\" $selected>$province</option>";
           }
           ?>
         </select>
