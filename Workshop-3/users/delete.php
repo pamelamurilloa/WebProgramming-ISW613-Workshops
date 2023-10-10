@@ -1,7 +1,10 @@
 <?php
-    // Retrieve the URL variables (using PHP).
+    include('../utils/functions.php');
     $userID = $_GET['id'];
-    echo "The user with the id $userID is going to be deleted";
+    if (deleteUser($userID)) {
+        header("Location: http://localhost/WebProgramming-Workshops/Workshop-2/showUsers.php");
+    } else {
+        header("Location: http://localhost/WebProgramming-Workshops/Workshop-2/showUsers.php?error=true");
+    };
+    
 ?>
-
-<!--et the id, identify it in the database, if it exists, make a confirm message if it is deleted correctly, uf not, show a message -->
