@@ -169,3 +169,17 @@ function setInactiveUsers ($hoursSinceLastLogin){
 
   return $result;
 }
+
+function updateLoginTime($userID) {
+  // UPDATE users SET last_login_datetime = CURRENT_TIMESTAMP WHERE id = 1
+  $conexion = getConexion();
+  $sql = "UPDATE users SET last_login_datetime = CURRENT_TIMESTAMP WHERE id = $userID;";
+  $result = $conexion->query($sql);
+
+  // Check if the query was successful
+  if ($result === false) {
+    die("Error in SQL query: " . $conexion->error);
+  }
+
+  return $result;
+}
