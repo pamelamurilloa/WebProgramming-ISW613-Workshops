@@ -32,29 +32,12 @@ function getProvinces() {
 
 }
 
-/**
- * Saves an specific user into the database
- */
-function saveUser($user){
-
-  $firstName = $user['firstName'];
-  $lastName = $user['lastName'];
-  $password = $user['password'];
-  $email = $user['email'];
-  $provinceID = $user['provinceID'];
-  
-  $sql = "INSERT INTO users (firstname, lastname, password, email, province_id) VALUES('$firstName', '$lastName', '$password', '$email', '$provinceID')";
-
-  $conexion = getConexion();
-
-  return $conexion->query($sql);
-}
 
 function getUsers() {
   $conexion = getConexion();
 
   // Perform a SQL query to fetch user data
-  $sql = "SELECT u.id, u.firstname, u.lastname, u.email, p.name as province FROM users as u join provinces as p on p.id = u.province_id";
+  $sql = "SELECT u.id, u.firstname, u.lastname, u.username, u.email, p.name as province, u.role FROM users as u join provinces as p on p.id = u.province_id";
   $result = $conexion->query($sql);
 
   // Check if the query was successful
@@ -72,32 +55,102 @@ function getUsers() {
   return $users;
 }
 
-function authenticate($username, $password){
-  $conn = getConexion();
-  $sql = "SELECT * FROM users WHERE `username` = '$username' AND `password` = '$password'";
-  $result = $conn->query($sql);
+function getUserByID($userID) {
+  $conexion = getConexion();
 
-  if ($conn->connect_errno) {
-    $conn->close();
+  // Perform a SQL query to fetch user data
+  $sql = "SELECT u.id, u.firstname, u.lastname, u.password, u.username, u.email, u.province_id, u.role FROM users as u WHERE u.id = '$userID'";
+  $result = $conexion->query($sql);
+
+  // Check if the query was successful
+  if ($result === false) {
+    die("Error in SQL query: " . $conexion->error);
+  }
+
+  $results = $result->fetch_array();
+  $conexion->close();
+  return $results;
+}
+
+function authenticate($username, $password){
+  $conexion = getConexion();
+  $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+  $result = $conexion->query($sql);
+
+  if ($conexion->connect_errno) {
+    $conexion->close();
     return false;
   }
   $results = $result->fetch_array();
-  $conn->close();
+  $conexion->close();
   return $results;
 }
 
 /**
- * Deletes an student from the database
+ * Saves an specific user into the database
+ */
+
+function saveUser($user){
+
+  $firstName = $user['firstName'];
+  $lastName = $user['lastName'];
+  $password = $user['password'];
+  $username = $user['userName'];
+  $email = $user['email'];
+  $provinceID = $user['provinceID'];
+  $role = $user['role'];
+  
+  $sql = "INSERT INTO users (firstname, lastname, password, username, email, province_id, role) VALUES('$firstName', '$lastName', '$password', '$username', '$email', '$provinceID', '$role');";
+
+  $conexion = getConexion();
+
+  return $conexion->query($sql);
+}
+
+/**
+ * Edits
+ */
+
+ function updateUser($user){
+
+  $userID = $user['id'];
+  $firstName = $user['firstname'];
+  $lastName = $user['lastname'];
+  $password = $user['password'];
+  $username = $user['username'];
+  $email = $user['email'];
+  $provinceID = $user['provinceID'];
+  $role = $user['role'];
+  
+
+  $sql = "UPDATE users SET firstname = '$firstName', lastname = '$lastName', password = '$password', username = '$username', email = '$email', province_id = '$provinceID', role = '$role' WHERE id = $userID";
+
+
+  $conexion = getConexion();
+
+  $result = $conexion->query($sql);
+
+  // Check if the query was successful
+  if ($result === false) {
+    die("Error in SQL query: " . $conexion->error);
+  }
+
+  $conexion->close();
+  return $result;
+}
+
+/**
+ * Deletes a student from the database
  */
 function deleteUser($id){
-  $conn = getConexion();
+  $conexion = getConexion();
   $sql = "DELETE FROM users WHERE id = $id";
-  $result = $conn->query($sql);
+  $result = $conexion->query($sql);
 
-  if ($conn->connect_errno) {
-    $conn->close();
+  if ($conexion->connect_errno) {
+    $conexion->close();
     return false;
   }
-  $conn->close();
+  $conexion->close();
   return true;
 }
