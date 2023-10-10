@@ -15,9 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user['role'] = $_POST['role'];
 
   if (updateUser($user)) {
-    header("Location: http://localhost/WebProgramming-Workshops/Workshop-3/showUsers.php");
+    header("Location: http://localhost/WebProgramming-Workshops/Workshop-4/showUsers.php");
   } else {
-    header("Location: http://localhost/WebProgramming-Workshops/Workshop-3/?error=true");
+    header("Location: http://localhost/WebProgramming-Workshops/Workshop-4/?error=true");
   }
 
 

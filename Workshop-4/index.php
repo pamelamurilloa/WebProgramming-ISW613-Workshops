@@ -1,3 +1,16 @@
+<!-- <?php
+
+    // echo "Script Greet.php".PHP_EOL;
+    // print_r($argv);
+    // echo "Cantidad de parametros: $argc".PHP_EOL;
+
+    // foreach ($argv as $key => $value) {
+    //     echo "Parametro $key: $value".PHP_EOL;
+
+    // }
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +37,6 @@
 
       <input type="submit" class="btn btn-primary" value="Login"></input>
 
-      <a class="btn" href="/WebProgramming-Workshops/Workshop-3/users/addUser.php?id=0">Sign Up</a>
+      <a class="btn" href="/WebProgramming-Workshops/Workshop-4/users/addUser.php?id=0">Sign Up</a>
 </body>
 </html>

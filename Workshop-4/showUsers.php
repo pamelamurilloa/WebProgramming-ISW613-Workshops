@@ -44,15 +44,15 @@ $users = getUsers();
                         <td><?php echo $user['province']; ?></td>
                         <td><?php echo $user['role']; ?></td>
                         <?php
-                        echo '<td><a href="/WebProgramming-Workshops/Workshop-3/users/edit.php?id=' . $user['id'] . '">Edit</a> </td>';
-                        echo '<td><a href="/WebProgramming-Workshops/Workshop-3/users/delete.php?id=' . $user['id'] . '">Delete</a> </td>';
+                        echo '<td><a href="/WebProgramming-Workshops/Workshop-4/users/edit.php?id=' . $user['id'] . '">Edit</a> </td>';
+                        echo '<td><a href="/WebProgramming-Workshops/Workshop-4/users/delete.php?id=' . $user['id'] . '">Delete</a> </td>';
                         ?>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-3/index.php">Return to Main</a>
-        <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-3/users/addUser.php?id=1">Add new User</a>
+        <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-4/index.php">Return to Main</a>
+        <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-4/users/addUser.php?id=1">Add new User</a>
         </div>
 </body>
 </html>
