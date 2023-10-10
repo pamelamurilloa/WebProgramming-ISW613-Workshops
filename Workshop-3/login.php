@@ -3,8 +3,8 @@
 
 
   if($_POST) {
-    $username = $_REQUEST['username'];
-    $password = $_REQUEST['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     $user = authenticate($username, $password);
 
@@ -12,9 +12,12 @@
       session_start();
       $_SESSION['user'] = $user;
 
-      //sendScheduleEmail($user['email-address'], "Bievenido");
-
-      header('Location: dashboard.php');
+      if ($user['role'] === 'admin') {
+        header('Location: showUsers.php');
+      } else {
+        header('Location: users/userScreen.php?id=' . $user['id'] . '');
+      }
+      
     } else {
       header('Location: index.php?status=login');
     }
