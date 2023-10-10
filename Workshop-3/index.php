@@ -24,6 +24,6 @@
 
       <input type="submit" class="btn btn-primary" value="Login"></input>
 
-      <a class="btn" href="/WebProgramming-Workshops/Workshop-3/users/addUser.php">Sign Up</a>
+      <a class="btn" href="/WebProgramming-Workshops/Workshop-3/users/addUser.php?id=0">Sign Up</a>
 </body>
 </html>

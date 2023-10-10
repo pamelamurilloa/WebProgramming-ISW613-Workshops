@@ -1,6 +1,9 @@
 <?php
   include('../utils/functions.php');
   $provinces = getProvinces();
+
+  $userID = $_GET['id'];
+  $user = getUserByID($userID);
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +40,16 @@
         <label for="email">Email Address</label>
         <input id="email" class="form-control" type="text" name="email">
       </div>
+
+      <?php
+      if ($user['role'] === 'admin') {
+        echo '<div class="form-group">';
+        echo '<label for="role">Role</label>';
+        echo '<input id="role" class="form-control" type="text" name="role" value"nonAdmin">';
+        echo '</div>';
+      }
+      ?>
+
       <div class="form-group">
         <label for="province">Provincia</label>
         <select id="province" class="form-control" name="province">

@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user['userName'] = $_POST['userName'];
     $user['email'] = $_POST['email'];
     $user['provinceID'] = $_POST['province'];
-    $user['role'] = 'normal_user';
+    $user['role'] = $_POST['role'];
 
   if (saveUser($user)) {
     header("Location: http://localhost/WebProgramming-Workshops/Workshop-3/index.php");

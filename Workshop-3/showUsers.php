@@ -2,7 +2,6 @@
 include('utils/functions.php');
 
 //Fetches the user list from fuctions
-
 $users = getUsers();
 ?>
 
@@ -53,7 +52,8 @@ $users = getUsers();
             </tbody>
         </table>
         <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-3/index.php">Return to Main</a>
-    </div>
+        <a class="btn btn-secondary" href="/WebProgramming-Workshops/Workshop-3/users/addUser.php?id=1">Add new User</a>
+        </div>
 </body>
 </html>
 
