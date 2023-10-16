@@ -3,6 +3,13 @@
 
     $userID = $_GET['id'];
     $user = getUserByID($userID);
+
+    session_start();
+
+    if (empty($_SESSION['user']) || $_SESSION['user']['username'] != $user['username']) {
+        header("Location: ../logout.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +25,7 @@
     <h1>Congratulations, you have logged in.</h1>
     <h2>What do you want to do?</h2>
     <?php
-        echo '<td><a class="btn" href="/WebProgramming-Workshops/Workshop-4/index.php">Return to Login</a> </td>';
+        echo '<td><a class="btn" href="../session/logout.php">Return to Login</a> </td>';
     ?>
 
 </body>
