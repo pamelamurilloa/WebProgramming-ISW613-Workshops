@@ -4,6 +4,10 @@
 
   $userID = $_GET['id'];
   $user = getUserByID($userID);
+  $role = 'none';
+
+  if (isset($user)) { $role = $user['role']; }
+
 ?>
 
 <!DOCTYPE html>
@@ -42,12 +46,12 @@
       </div>
 
       <?php
-      if ($user['role'] === 'admin') {
-        echo '<div class="form-group">';
-        echo '<label for="role">Role</label>';
-        echo '<input id="role" class="form-control" type="text" name="role" value"nonAdmin">';
-        echo '</div>';
-      }
+        if ($role === 'admin') {
+          echo '<div class="form-group">';
+          echo '<label for="role">Role</label>';
+          echo '<input id="role" class="form-control" type="text" name="role" value"nonAdmin">';
+          echo '</div>';
+        }
       ?>
 
       <div class="form-group">
