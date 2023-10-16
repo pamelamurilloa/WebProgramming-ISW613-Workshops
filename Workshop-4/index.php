@@ -11,12 +11,7 @@
 </head>
 <body>
 <div class="container">
-  <?php
-    if ( isset( $_GET["error"] ) ){
-      $error_message = $_GET["error"];
-      echo '<p class="error_message">' . $error_message;
-    }
-  ?>
+
     <h1>User Login</h1>
     <form action="session/login.php" method="POST" class="form-inline" role="form">
       <div class="form-group">
@@ -31,5 +26,12 @@
       <input type="submit" class="btn btn-primary" value="Login"></input>
 
       <a class="btn" href="users/addUser.php?id=0">Sign Up</a>
+
+      <?php
+        if ( isset( $_GET["error"] ) ){
+          $error_message = $_GET["error"];
+          echo '<p class="error_message">' . $error_message;
+        }
+      ?>
 </body>
 </html>
