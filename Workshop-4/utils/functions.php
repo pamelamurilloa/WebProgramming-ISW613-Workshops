@@ -74,7 +74,7 @@ function getUserByID($userID) {
 
 function authenticate($username, $password){
   $conexion = getConexion();
-  $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
+  $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password' AND active_status = 1;";
   $result = $conexion->query($sql);
 
   if ($conexion->connect_errno) {
