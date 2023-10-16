@@ -171,7 +171,6 @@ function setInactiveUsers ($hoursSinceLastLogin){
 }
 
 function updateLoginTime($userID) {
-  // UPDATE users SET last_login_datetime = CURRENT_TIMESTAMP WHERE id = 1
   $conexion = getConexion();
   $sql = "UPDATE users SET last_login_datetime = CURRENT_TIMESTAMP WHERE id = $userID;";
   $result = $conexion->query($sql);
@@ -182,4 +181,12 @@ function updateLoginTime($userID) {
   }
 
   return $result;
+}
+
+function confirmLogin (){
+  session_start();
+  if ( empty($_SESSION['user']) ) {
+    header("Location: ../session/logout.php");
+    exit();
+  }
 }
