@@ -1,16 +1,3 @@
-<!-- <?php
-
-    // echo "Script Greet.php".PHP_EOL;
-    // print_r($argv);
-    // echo "Cantidad de parametros: $argc".PHP_EOL;
-
-    // foreach ($argv as $key => $value) {
-    //     echo "Parametro $key: $value".PHP_EOL;
-
-    // }
-
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,23 +7,29 @@
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
-  <title>Document</title>
+  <title>Login</title>
 </head>
 <body>
 <div class="container">
+  <?php
+    if ( isset( $_GET["error"] ) ){
+      $error_message = $_GET["error"];
+      echo '<p class="error_message">' . $error_message;
+    }
+  ?>
     <h1>User Login</h1>
-    <form action="login.php" method="POST" class="form-inline" role="form">
+    <form action="session/login.php" method="POST" class="form-inline" role="form">
       <div class="form-group">
-        <label class="sr-only" for="">Username</label>
+        <label class="sr-only" for="username">Username</label>
         <input type="text" class="form-control" name="username" placeholder="Your username">
       </div>
       <div class="form-group">
-        <label class="sr-only" for="">Password</label>
+        <label class="sr-only" for="password">Password</label>
         <input type="password" class="form-control" name="password" placeholder="Your password">
       </div>
 
       <input type="submit" class="btn btn-primary" value="Login"></input>
 
-      <a class="btn" href="/WebProgramming-Workshops/Workshop-4/users/addUser.php?id=0">Sign Up</a>
+      <a class="btn" href="users/addUser.php?id=0">Sign Up</a>
 </body>
 </html>
