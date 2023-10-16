@@ -13,9 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user['role'] = $_POST['role'];
 
   if (saveUser($user)) {
-    header("Location: http://localhost/WebProgramming-Workshops/Workshop-4/index.php");
+    header("Location: index.php?message=Usuario registrado correctamente");
   } else {
-    header("Location: http://localhost/WebProgramming-Workshops/Workshop-4/?error=true");
+    header("Location: index.php?error=No se ha podido guardar el usuario");
   }
 
 }
