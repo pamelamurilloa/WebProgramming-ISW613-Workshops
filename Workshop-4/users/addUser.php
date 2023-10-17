@@ -6,6 +6,8 @@
   $user = getUserByID($userID);
   $role = 'none';
 
+  // If the user exists, then that means an admin is trying to alter an user, so the role changes to that of the user,
+  // if there is no user, then its a new one trying to register, so the role is none
   if (isset($user)) { $role = $user['role']; }
 
 ?>
@@ -46,6 +48,7 @@
       </div>
 
       <?php
+      // An admin can also introduce the role of a new user
         if ($role === 'admin') {
           echo '<div class="form-group">';
           echo '<label for="role">Role</label>';
