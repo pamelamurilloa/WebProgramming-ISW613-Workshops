@@ -20,7 +20,7 @@ function getAverageFromArray($numberArray) {
 }
 
 
-//This takes the numberArray, and selects the top and bottom numbers according to what was asked.
+// This takes the numberArray, and selects the top and bottom numbers according to what was asked.
 // If $top is 5, then it selects the top 5 highest numbers, same with the bottom
 function getLowestHighestNumberInArray ($top, $bottom, $numberArray) {
     sort($numberArray);
