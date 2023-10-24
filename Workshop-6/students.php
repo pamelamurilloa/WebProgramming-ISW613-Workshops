@@ -2,23 +2,13 @@
 
 require_once("functions.php");
 
-class Student {
+// Makes a new studentManager filled with the database information
+$studentManager = new StudentManager(getStudents());
 
-  private $id;
-  private $name;
-  private $lastname;
-  private $idcard;
-  private $age;
+// Prints all the students separated by commas
 
-  // Methods
-  function set_name($name) {
-    $this->name = $name;
-  }
-  function get_name() {
-    return $this->name;
-  }
-}
+$argv[1] = isset($argv[1]) ? $argv[1]  : null;
 
-function getStudentsFromDatabase () {
+$studentManager->showStudents($argv[1]);
 
-}
+?>
