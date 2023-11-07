@@ -64,7 +64,7 @@ class DataBaseConexion {
         $conexion = $this->getConexion();
     
         // Perform a SQL query to fetch user data
-        $sql = "SELECT u.id, u.firstname, u.lastname, u.password, u.username, u.email, u.province_id, u.role FROM users as u WHERE u.id = '$userID'";
+        $sql = "SELECT u.id, u.firstname, u.lastname, u.password, u.username, u.email, u.province_id, u.role, u.imageurl FROM users as u WHERE u.id = '$userID'";
         $result = $conexion->query($sql);
     
         // Check if the query was successful
