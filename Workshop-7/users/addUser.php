@@ -26,11 +26,6 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-  <header>
-    <h1> Bienvenido <?php echo $user['name']; echo $user['lastname'] ?> </h1>
-    <img src="<?php echo $user['imageurl']; ?>" alt="User profile picture"/>
-    <a href="/logout.php">Logout</a>
-  </header>
 
   <div class="container-fluid">
     <div class="jumbotron">

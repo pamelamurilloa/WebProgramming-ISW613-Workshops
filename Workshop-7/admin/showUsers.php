@@ -18,6 +18,12 @@ $users = $dbManager->getUsers();
   <title>UserInformation</title>
 </head>
 <body>
+    <header>
+        <h1> Bienvenido <?php echo $user['name']; echo $user['lastname'] ?> </h1>
+        <img src="<?php echo $user['imageurl']; ?>" alt="User profile picture"/>
+        <a href="/logout.php">Logout</a>
+    </header>
+    
     <div class="user-info-container">
         <div class="user-info-container__top-info">
             <h1 class="title">User Information</h1>

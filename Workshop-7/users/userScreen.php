@@ -25,6 +25,12 @@
     <title>User Page</title>
 </head>
 <body>
+    <header>
+        <h1> Bienvenido <?php echo $user['name']; echo $user['lastname'] ?> </h1>
+        <img src="<?php echo $user['imageurl']; ?>" alt="User profile picture"/>
+        <a href="/logout.php">Logout</a>
+    </header>
+
     <h1>Congratulations, you have logged in.</h1>
     <h2>What do you want to do?</h2>
     <?php
