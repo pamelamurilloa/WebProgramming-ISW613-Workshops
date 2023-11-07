@@ -40,19 +40,19 @@
     </div>
     <form method="post" action="../signup.php" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="first-name">First Name</label>
+        <label class="sr-only" for="first-name">First Name</label>
         <input id="first-name" class="form-control" type="text" name="firstName">
       </div>
       <div class="form-group">
-        <label for="last-name">Last Name</label>
+        <label class="sr-only" for="last-name">Last Name</label>
         <input id="last-name" class="form-control" type="text" name="lastName">
       </div>
       <div class="form-group">
-        <label for="user-name">Username</label>
+        <label class="sr-only" for="user-name">Username</label>
         <input id="user-name" class="form-control" type="text" name="userName">
       </div>
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label class="sr-only" for="email">Email Address</label>
         <input id="email" class="form-control" type="text" name="email">
       </div>
 
@@ -67,7 +67,7 @@
       ?>
 
       <div class="form-group">
-        <label for="province">Provincia</label>
+        <label class="sr-only" for="province">Provincia</label>
         <select id="province" class="form-control" name="province">
           <?php
           foreach($provinces as $id => $province) {
@@ -77,12 +77,12 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
+        <label class="sr-only" for="password">Password</label>
         <input id="password" class="form-control" type="password" name="password">
       </div>
 
       <div class="form-group">
-        <label for="imageurl">Profile Picture</label>
+        <label class="sr-only" for="imageurl">Profile Picture</label>
         <input type="file" name="imageurl" id="imageurl">
       </div>
       
