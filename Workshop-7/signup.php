@@ -14,6 +14,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user['role'] = $_POST['role'];
     $user['imageurl'] = $_POST['imageurl'];
 
+    $file_tmp = $_FILES["selectedFile"]["tmp_name"];
+    $target_dir = "uploads/";
+    $target_file = $target_dir . basename($_FILES["selectedFile"]["name"]);
+    move_uploaded_file($file_tmp,$target_file);
+
     $dbManager = new DataBaseConexion();
 
   if ($dbManager->saveUser($user)) {

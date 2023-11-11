@@ -104,7 +104,7 @@ class DataBaseConexion {
         $email = $user['email'];
         $provinceID = $user['provinceID'];
         $role = $user['role'];
-        $profilePicture = $user['profilePicture'];
+        $profilePicture = $user['selectedFile'];
         
         $sql = "INSERT INTO users (firstname, lastname, password, username, email, province_id, role, profilePicture) VALUES('$firstName', '$lastName', '$password', '$username', '$email', '$provinceID', '$role', '$profilePicture');";
     

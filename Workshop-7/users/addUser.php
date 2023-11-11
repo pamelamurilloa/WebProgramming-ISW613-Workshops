@@ -77,8 +77,8 @@
       </div>
 
       <div class="form-group">
-        <label class="sr-only" for="imageurl">Profile Picture</label>
-        <input type="file" name="imageurl" id="imageurl">
+        <label class="sr-only" for="selectedFile">Profile Picture</label>
+        <input type="file" name="selectedFile" id="selectedFile">
       </div>
       
       <button type="submit" class="btn btn-primary">Register</button>
