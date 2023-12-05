@@ -16,8 +16,8 @@
         </div>
 
         <div class="form-group">
-            <label>Address</label></br>
-            <input type="text" name="address" id="address" value="{{$students->email}}" class="form-control"></br>
+            <label>Email</label></br>
+            <input type="emai" name="emai" id="emai" value="{{$students->email}}" class="form-control"></br>
         </div>
 
         <div class="form-group">
