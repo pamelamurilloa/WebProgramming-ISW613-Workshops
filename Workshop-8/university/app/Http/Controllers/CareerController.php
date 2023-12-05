@@ -11,7 +11,8 @@ class CareerController extends Controller
      */
     public function index()
     {
-        //
+        $careers = Career::all();
+        return view ('careers.index')->with('careers', $careers);
     }
 
     /**
@@ -19,7 +20,7 @@ class CareerController extends Controller
      */
     public function create()
     {
-        //
+        return view('careers.create');
     }
 
     /**
@@ -27,7 +28,9 @@ class CareerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Career::create($input);
+        return redirect('career')->with('flash_message', 'Career Succesfully Added');  
     }
 
     /**
@@ -35,7 +38,8 @@ class CareerController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $career = Career::find($id);
+        return view('careers.show')->with('careers', $career);
     }
 
     /**
@@ -43,7 +47,8 @@ class CareerController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $career = Career::find($id);
+        return view('careers.edit')->with('careers', $career);
     }
 
     /**
@@ -51,7 +56,10 @@ class CareerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $career = Career::find($id);
+        $input = $request->all();
+        $career->update($input);
+        return redirect('career')->with('flash_message', 'Career Succesfully Updated');  
     }
 
     /**
@@ -59,6 +67,7 @@ class CareerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Career::destroy($id);
+        return redirect('career')->with('flash_message', 'Career Succesfully Deleted'); 
     }
 }
