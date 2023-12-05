@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
-// Rutas de Estudiantes
-Route::resource('students', 'StudentController');
+Route::resource("/student", StudentController::class);
 
-// Rutas de Carreras
-Route::resource('carreras', 'CarreraController');
+// Route::get('/careers', [CareerController::Class, 'index'])->name('careers.index');
+
+// Route::get('/careers/form', [CareerController::Class, 'showForm'])->name('careers.form');
+
+
+
+// Route::get('/students', [StudentController::Class, 'index'])->name('students.index');
+
+// Route::get('/students/form', [StudentController::Class, 'showForm'])->name('students.form');
