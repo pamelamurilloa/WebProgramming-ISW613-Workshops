@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Rutas de Estudiantes
+Route::resource('students', 'StudentController');
+
+// Rutas de Carreras
+Route::resource('carreras', 'CarreraController');
