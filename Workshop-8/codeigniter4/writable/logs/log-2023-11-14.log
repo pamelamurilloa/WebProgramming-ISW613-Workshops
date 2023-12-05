@@ -1,0 +1,151 @@
+CRITICAL - 2023-11-14 04:03:04 --> App\Controllers\Home::index(): Return value must be of type string, none returned
+in APPPATH/Controllers/Home.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:02:05 --> Class "App\Controllers\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:02:17 --> Class "App\Controllers\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 11.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:26:10 --> Call to a member function findAll() on null
+in APPPATH/Controllers/Student.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:26:59 --> Call to a member function findAll() on null
+in APPPATH/Controllers/Student.php on line 15.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:33:12 --> Class "App\Models\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:33:12 --> Class "App\Models\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:33:13 --> Class "App\Models\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+CRITICAL - 2023-11-14 15:33:14 --> Class "App\Models\StudentModel" not found
+in APPPATH/Controllers/Student.php on line 14.
+ 1 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+ERROR - 2023-11-14 15:34:02 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/owner/dev/utn/isw613/week9/codeigniter4/app/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+#7 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(942): App\Controllers\Student->index()
+#8 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Commands/Server/rewrite.php(47): require_once('/Users/owner/de...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/owner/dev/utn/isw613/week9/codeigniter4/app/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+#6 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(942): App\Controllers\Student->index()
+#7 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#8 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Commands/Server/rewrite.php(47): require_once('/Users/owner/de...')
+#11 {main}
+CRITICAL - 2023-11-14 15:34:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
+ERROR - 2023-11-14 15:34:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/owner/dev/utn/isw613/week9/codeigniter4/app/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+#7 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(942): App\Controllers\Student->index()
+#8 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#9 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Commands/Server/rewrite.php(47): require_once('/Users/owner/de...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 /Users/owner/dev/utn/isw613/week9/codeigniter4/app/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+#6 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(942): App\Controllers\Student->index()
+#7 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+#8 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /Users/owner/dev/utn/isw613/week9/codeigniter4/system/Commands/Server/rewrite.php(47): require_once('/Users/owner/de...')
+#11 {main}
+CRITICAL - 2023-11-14 15:34:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH/Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Controllers/Student.php(15): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(942): App\Controllers\Student->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Student))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/owner/dev/utn/isw613/week9/codeigniter4/public/index.php')
