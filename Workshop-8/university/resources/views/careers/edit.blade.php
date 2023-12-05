@@ -1,8 +1,8 @@
-@extends('careers.layout')
+@extends('layout')
 @section('content')
   
 <div class="card" style="margin:20px;">
-  <div class="card-header">Edit Student</div>
+  <div class="card-header">Edit Career</div>
   <div class="card-body">
        
       <form action="{{ url('career/' .$careers->id) }}" method="post">

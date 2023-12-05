@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\Career;
 
 class StudentController extends Controller
 {
@@ -21,7 +22,8 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return view('students.create');
+        $careers = Career::all();
+        return view('students.create')->with('careers', $careers);;
     }
 
     /**
@@ -49,7 +51,8 @@ class StudentController extends Controller
     public function edit(string $id)
     {
         $student = Student::find($id);
-        return view('students.edit')->with('students', $student);
+        $careers = Career::all();
+        return view('students.edit', compact('student', 'careers'));
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('careers.layout')
+@extends('layout')
 @section('content')
     <div class="container">
         <div class="row" style="margin:20px;">
@@ -8,7 +8,7 @@
                         <h2>Career CRUD</h2>
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/student/create') }}" class="btn btn-success btn-sm" title="Add New Student">
+                        <a href="{{ url('/career/create') }}" class="btn btn-success btn-sm" title="Add New Career">
                             Add New
                         </a>
                         <br/>

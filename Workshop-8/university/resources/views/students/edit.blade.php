@@ -1,4 +1,4 @@
-@extends('students.layout')
+@extends('layout')
 @section('content')
   
 <div class="card" style="margin:20px;">
@@ -21,16 +21,15 @@
         </div>
 
         <div class="form-group">
-            <label for="career_id">Category</label>
-            <select id="career_id" class="form-control" name="career_id">
-            <?php
-            foreach($careers as $id => $career) {
-                $selected = ($id == $students->career_id) ? 'selected' : '';
-                echo "<option value=\"$id\" $selected>$career</option>";
-            }
-            ?>
-            </select>
-        </div>
+        <label for="career_id">Career</label>
+        <select id="career_id" class="form-control" name="career_id">
+            @foreach($careers as $career)
+                <option value="{{ $career->id }}" {{ $career->id == $students->career_id ? 'selected' : '' }}>
+                    {{ $career->name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
 
         <input type="submit" value="Update" class="btn btn-success"></br>
     </form>

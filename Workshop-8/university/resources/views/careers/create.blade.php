@@ -1,4 +1,4 @@
-@extends('careers.layout')
+@extends('layout')
 @section('content')
   
 <div class="card" style="margin:20px;">

@@ -1,4 +1,4 @@
-@extends('students.layout')
+@extends('layout')
 @section('content')
   
 <div class="card" style="margin:20px;">
@@ -9,23 +9,23 @@
         {!! csrf_field() !!}
 
         <div class="form-group">
-            <label>Name</label></br>
+            <label for="name">Name</label></br>
             <input type="text" name="name" id="name" class="form-control"></br>
         </div>
 
         <div class="form-group">
-            <label>Email</label></br>
-            <input type="emai" name="emai" id="emai" class="form-control"></br>
+            <label for="email">Email</label></br>
+            <input type="email" name="email" id="email" class="form-control"></br>
         </div>
 
         <div class="form-group">
             <label for="career_id">Career</label>
             <select id="career_id" class="form-control" name="career_id">
-            <?php
-                foreach($careers as $id => $career) {
-                    echo "<option value=\"$id\">$career</option>";
-                }
-            ?>
+                <?php
+                    foreach($careers as $career) {
+                        echo "<option value=$career->id>$career->name</option>";
+                    }
+                ?>
             </select>
         </div>
 

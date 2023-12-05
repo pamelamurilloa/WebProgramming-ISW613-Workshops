@@ -11,7 +11,5 @@ class Career extends Model
 
     protected $table = 'careers';
     protected $primaryKey = 'id';
-    protected $fillable = [
-                            'name'
-                          ];
+    protected $fillable = ['name'];
 }
